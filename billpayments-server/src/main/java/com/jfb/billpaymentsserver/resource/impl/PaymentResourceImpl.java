@@ -1,7 +1,6 @@
 package com.jfb.billpaymentsserver.resource.impl;
 
 import com.jfb.billpaymentsserver.models.Payment;
-import com.jfb.billpaymentsserver.resource.PaymentResource;
 import com.jfb.billpaymentsserver.services.PaymentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

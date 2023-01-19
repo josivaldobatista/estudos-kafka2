@@ -1,4 +1,4 @@
-package com.jfb.billpaymentsserver.resource;
+package com.jfb.billpaymentsserver.resource.impl;
 
 import com.jfb.billpaymentsserver.models.Payment;
 import org.springframework.http.ResponseEntity;
