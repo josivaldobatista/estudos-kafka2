@@ -1,6 +1,8 @@
 package com.jfb.jsonconsumer.listener;
 
 import com.jfb.jsonconsumer.models.Payment;
+import com.jfb.jsonconsumer.services.JsonConsumerService;
+import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -11,7 +13,10 @@ import static java.lang.Thread.sleep;
 
 @Component
 @Log4j2
+@RequiredArgsConstructor
 public class JsonListener {
+
+  private final JsonConsumerService service;
 
   @SneakyThrows
   @KafkaListener(
@@ -24,6 +29,7 @@ public class JsonListener {
     log.info("Validando fraud ...");
     sleep(2000);
     log.info("Compra aprovada...");
+    service.salvar(payment);
     sleep(3000);
   }
 
